@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online OrderSystem</title>
+</head>
+<body>
+
+<h2>Place Your Order</h2>
+
+<form action="/order" method="post" th:object="${user}">
+    <label>Item Name:</label>
+    <input type="text" th:field="*{itemName}" required/>
+    <br><br>
+
+    <label>Quantity:</label>
+    <input type="number" th:field="*{quantity}" required/>
+    <br><br>
+
+    <button type="submit">Order</button>
+</form>
+
+<h3 th:text="${message}"></h3>
+
+</body>
+</html>
