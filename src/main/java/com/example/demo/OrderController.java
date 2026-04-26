@@ -15,7 +15,7 @@ public class OrderController {
 
     @PostMapping("/order")
     public String placeOrder(@ModelAttribute User user, Model model) {
-        String message = "Order placed successfully! Item: " 
+        String message = "Order placed successfully done for Item: " 
                 + user.getItemName() + ", Quantity: " 
                 + user.getQuantity();
 
